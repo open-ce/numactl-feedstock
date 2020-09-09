@@ -1,0 +1,37 @@
+{% set name = "numactl" %}
+{% set version = "2.0.12" %}
+
+package:
+  name: {{ name }}
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/numactl/numactl.git
+  git_rev: v{{ version }}
+
+build:
+  number: 1
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - libtool
+    - automake
+    - autoconf
+    - make {{ make }}  
+
+test:
+  commands:
+     - which numactl | grep conda
+
+about:
+  home: https://github.com/numactl/numactl
+  license: GPL-2.0
+  license_family: GPL2
+  summary: Control NUMA policy for processes or shared memory
+  description: Control NUMA policy for processes or shared memory
+
+extra:
+  recipe-maintainers:
+    - open-ce/open-ce-dev-team
