@@ -19,7 +19,7 @@ requirements:
     - libtool
     - automake
     - autoconf
-    - make {{ make }}  
+    - make
 
 test:
   commands:
