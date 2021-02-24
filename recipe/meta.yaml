@@ -10,6 +10,7 @@ source:
   git_rev: v{{ version }}
 
 build:
+  # add license_file in about section on refresh.
   number: 2
 
 requirements:
