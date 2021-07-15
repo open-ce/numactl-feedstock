@@ -11,10 +11,7 @@ source:
 
 build:
   # add license_file in about section on refresh.
-  number: 3
-  ignore_run_exports:
-    - libgcc-ng
-    - libstdcxx-ng
+  number: 4
 
 requirements:
   build:
@@ -28,10 +25,6 @@ requirements:
     - libgcc-ng  {{ libgcc }}
     - libstdcxx-ng  {{ libstdcxx }}
   host:
-    # Use pins to control cos6/cos7 match
-    - libgcc-ng  {{ libgcc }}
-    - libstdcxx-ng  {{ libstdcxx }}
-  run:
     # Use pins to control cos6/cos7 match
     - libgcc-ng  {{ libgcc }}
     - libstdcxx-ng  {{ libstdcxx }}
