@@ -11,7 +11,7 @@ source:
 
 build:
   # add license_file in about section on refresh.
-  number: 4
+  number: 5
 
 requirements:
   build:
@@ -21,13 +21,6 @@ requirements:
     - automake
     - autoconf
     - make
-    # Use pins to control cos6/cos7 match
-    - libgcc-ng  {{ libgcc }}
-    - libstdcxx-ng  {{ libstdcxx }}
-  host:
-    # Use pins to control cos6/cos7 match
-    - libgcc-ng  {{ libgcc }}
-    - libstdcxx-ng  {{ libstdcxx }}
 
 test:
   commands:
