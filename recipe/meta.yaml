@@ -11,12 +11,12 @@ source:
 
 build:
   # add license_file in about section on refresh.
-  number: 5
+  number: 6
 
 requirements:
   build:
-    - {{ compiler('c') }}
-    - {{ compiler('cxx') }}
+    - {{ compiler('c') }}             #[ppc_arch != "p10"]
+    - {{ compiler('cxx') }}           #[ppc_arch != "p10"]
     - libtool
     - automake
     - autoconf
