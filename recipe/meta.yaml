@@ -1,5 +1,10 @@
 {% set name = "numactl" %}
+{% if not s390x %}
 {% set version = "2.0.12" %}
+{% endif %}
+{% if  s390x %}
+{% set version = "2.0.14" %}
+{% endif %}
 
 package:
   name: {{ name }}
